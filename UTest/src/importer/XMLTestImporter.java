@@ -2,6 +2,7 @@ package importer;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -84,18 +85,29 @@ public class XMLTestImporter implements TestImporter {
 	}
 
 	@Override
-	public Test importTestWithNQuestions(String path, int numOfQuestions) throws IOException {
-		// TODO Auto-generated method stub
-		return null;
+	public Test importTestWithNQuestions(String path, int numOfQuestions) throws IOException, ParserConfigurationException, SAXException {
+		Test fullTest = importFullTest(path);
+		List<Question> allQuestions = fullTest.getQuestions();
+		Collections.shuffle(allQuestions);
+		
+//		if(allQuestions.size() < numOfQuestions) {
+//			throw new Exception();
+//		}
+		
+		List<Question> questions = new LinkedList<Question>();
+		for(int i=0; i<numOfQuestions; i++) {
+			questions.add(allQuestions.get(i));
+		}
+		return new Test(questions);
 	}
 	
 	
 	/**
 	 * Determine if answerNode is right or wrong and add it to the corresponding list
 	 * 
-	 * @param answerNode node to add to answer list
-	 * @param rightAnswerList list of right answers
-	 * @param wrongAnswerList list of wrong answers
+	 * @param answerNode - node to add to answer list
+	 * @param rightAnswerList - list of right answers
+	 * @param wrongAnswerList - list of wrong answers
 	 */
 	private void extractAnswerNode(Node answerNode, List<Answer> rightAnswerList, List<Answer> wrongAnswerList) {
 		String answerText = getTextFromAnswerNode(answerNode);
@@ -118,7 +130,7 @@ public class XMLTestImporter implements TestImporter {
 	/**
 	 * Extract text from answer node
 	 * 
-	 * @param answerNode node named <text> that contains the text of an answer
+	 * @param - answerNode node named <text> that contains the text of an answer
 	 * @return answer text
 	 */
 	private String getTextFromAnswerNode(Node answerNode) {
