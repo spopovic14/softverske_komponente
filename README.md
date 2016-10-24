@@ -1,0 +1,1 @@
+# softverske_komponente
