@@ -1,0 +1,32 @@
+{
+	"questions" : [
+	
+		{
+			"type" : "basic",
+			"text" : "Koliko je 2+2?",
+			"rightAnswers" : [
+				"4"
+			],
+			"wrongAnswers" : [
+				"2",
+				"3",
+				"5"
+			]
+		},
+		
+		{
+			"type" : "trueFalse",
+			"text" : "Da li je 2 + 2 = 4?",
+			"answer" : "true"
+		},
+		
+		{
+			"type" : "survey",
+			"statements" : [
+				"Volim kosmodisk",
+				"RAF je dobar fakultet"
+			]
+		}
+	
+	]
+}

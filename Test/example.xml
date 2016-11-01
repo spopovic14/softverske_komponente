@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<questions>
+
+	<question>
+		<text>Da li je pitanje?</text>
+	
+		<answer correct="true">
+			<text>Jeste</text>
+		</answer>
+		
+		<answer>
+			<text>Nije</text>
+		</answer>
+	</question>
+	
+	<question type="basic">
+		<text>Da li nije pitanje?</text>
+	
+		<answer correct="false">
+			<text>Jeste</text>
+		</answer>
+		
+		<answer correct="true">
+			<text>Nije</text>
+		</answer>
+	</question>
+	
+	<question type="trueFalse" answer="false">
+		<text>Da li je 5 * 5 = 30?</text>
+	</question>
+	
+	<question type="survey">
+		<statement>Raf je dobar fakultet.</statement>
+		
+		<statement>
+			Volim kosmodisk.
+		</statement>
+	</question>
+
+</questions>
