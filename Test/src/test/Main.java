@@ -1,5 +1,7 @@
 package test;
 
+import rs.edu.raf.test.exporter.JSONTestExporter;
+import rs.edu.raf.test.exporter.XMLTestExporter;
 import rs.edu.raf.test.importer.JSONTestImporter;
 import rs.edu.raf.test.importer.XMLTestImporter;
 import rs.edu.raf.test.model.Answer;
@@ -47,6 +49,8 @@ public class Main {
 				}
 			}
 			
+			JSONTestExporter jexporter = new JSONTestExporter();
+			XMLTestExporter exporter = new XMLTestExporter();
 			
 			JSONTestImporter imp = new JSONTestImporter();
 			test = imp.importFullTest("example.json");
@@ -81,6 +85,9 @@ public class Main {
 					System.out.println();
 				}
 			}
+			
+			exporter.exportTest(test, "export.xml");
+			jexporter.exportTest(test, "export.json");
 			
 			
 		}
