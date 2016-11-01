@@ -2,6 +2,13 @@ package rs.edu.raf.test.exporter;
 
 import rs.edu.raf.test.model.Test;
 
+
+/**
+ * Used for exporting Test objects in various formats.
+ * 
+ * @author stefan
+ *
+ */
 public interface TestExporter {
 	
 	
