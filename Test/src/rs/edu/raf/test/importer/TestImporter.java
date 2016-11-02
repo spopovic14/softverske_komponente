@@ -2,6 +2,13 @@ package rs.edu.raf.test.importer;
 
 import rs.edu.raf.test.model.Test;
 
+
+/**
+ * Used for importing Test objects in various formats.
+ * 
+ * @author stefan
+ *
+ */
 public interface TestImporter {
 	
 	/**

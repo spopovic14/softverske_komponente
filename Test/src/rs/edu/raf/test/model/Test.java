@@ -29,6 +29,7 @@ import rs.edu.raf.test.model.questions.QuestionTrueOrFalse;
 public class Test {
 	
 	private String nameOfTest;
+	
 	private List<Question> questions;
 	
 	/**
