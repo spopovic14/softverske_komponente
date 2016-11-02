@@ -1,0 +1,1 @@
+{"questions":[{"wrongAnswers":["2","3","5"],"rightAnswers":["4"],"text":"Koliko je 2+2?","type":"basic"},{"answer":"true","text":"Da li je 2 + 2 = 4?","type":"trueFalse"},{"statements":["Volim kosmodisk","RAF je dobar fakultet"],"type":"survey"}]}
