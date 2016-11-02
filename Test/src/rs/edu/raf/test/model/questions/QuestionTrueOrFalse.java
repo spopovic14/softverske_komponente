@@ -10,7 +10,7 @@ public class QuestionTrueOrFalse extends Question {
 	}
 	
 	public QuestionTrueOrFalse(String questionSentence, boolean correct){
-		super("Are these statements/questions true of false?");
+		super("Are these statements/questions true of false?\nCircle right answer. ");
 		this.correct = correct;
 		this.questionSentence = questionSentence;
 	}
@@ -35,6 +35,17 @@ public class QuestionTrueOrFalse extends Question {
 
 	public void setQuestionSentence(String questionSentence) {
 		this.questionSentence = questionSentence;
+	}
+
+	@Override
+	public String toStringForDocument() {
+		
+		StringBuilder stringBuild = new StringBuilder();
+		
+		stringBuild.append(questionSentence + "\n");
+		stringBuild.append("\n\t" + "TRUE" + "\t FALSE ");
+		
+		return stringBuild.toString();
 	}
 	
 	

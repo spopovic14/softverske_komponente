@@ -53,4 +53,16 @@ public class QuestionFillTheBlank extends Question {
 		map.put(text, blankValues);
 		
 	}
+
+	@Override
+	public String toStringForDocument() {
+	
+		StringBuilder stringBuild = new StringBuilder();
+		
+		for (String key : map.keySet()) {
+			stringBuild.append(key+ " ______________ ");
+		}
+		
+		return stringBuild.toString();
+	}
 }

@@ -70,8 +70,20 @@ public class QuestionMatching extends Question {
 		this.sentences = sentences;
 	}
 
-	public List<String> getListOfAttribute() {
+	public List<String> getListOfAttributeShuffeled() {
 		return listOfAttribute;
+	}
+
+	@Override
+	public String toStringForDocument() {
+		
+		StringBuilder stringBuild = new StringBuilder();
+		int counter = 0;
+		for (String key : sentences.keySet()) {
+			stringBuild.append("\n" + key + "\t\t\t\t" + getListOfAttributeShuffeled().get(counter++));
+		}
+		
+		return stringBuild.toString();
 	}
 
 	

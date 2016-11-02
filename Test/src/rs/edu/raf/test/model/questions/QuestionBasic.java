@@ -1,5 +1,6 @@
 package rs.edu.raf.test.model.questions;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -27,7 +28,6 @@ public class QuestionBasic extends Question {
 		rightAnswers = new LinkedList<Answer>();
 		this.questionSentence = questionSentence;
 	}
-	
 	
 	public QuestionBasic(String text, List<Answer> wrongAnswers, List<Answer> rightAnswers, String questionSentence){
 		super(text);
@@ -74,11 +74,20 @@ public class QuestionBasic extends Question {
 		this.questionSentence = questionSentence;
 	}
 
+	@Override
 	public String toStringForDocument() {
 		
 		StringBuilder stringBuild = new StringBuilder();
 		
-		
+		stringBuild.append(questionSentence + "\n");
+		LinkedList<Answer> bothLists = new LinkedList<Answer>(); 
+		bothLists.addAll(rightAnswers);
+		bothLists.addAll(wrongAnswers);
+		int counter = 1;
+		for (Answer answer : bothLists) {
+			Collections.shuffle(bothLists);
+			stringBuild.append("\n\t" + (counter++) + ". " + answer.getText());
+		}
 		
 		return stringBuild.toString();
 		

@@ -1,7 +1,7 @@
 package rs.edu.raf.test.model.questions;
 
 
-public abstract class Question {
+public abstract class Question implements QuestionInterface {
 	
 	private String textInstructionForQuestion;
 	

@@ -16,6 +16,7 @@ public class Main {
 		XMLTestImporter importer = new XMLTestImporter();
 		try {
 			Test test = importer.importFullTest("example.xml");
+			test.generateWordDocument("Probni Word File - Test", null);
 			for(Question q : test.getQuestions()) {
 				if(q instanceof QuestionBasic){
 					System.out.println(q.getTextInstructionForQuestion());
@@ -47,6 +48,8 @@ public class Main {
 				}
 			}
 			
+			JSONTestExporter jexporter = new JSONTestExporter();
+			XMLTestExporter exporter = new XMLTestExporter();
 			
 			JSONTestImporter imp = new JSONTestImporter();
 			test = imp.importFullTest("example.json");
@@ -81,6 +84,9 @@ public class Main {
 					System.out.println();
 				}
 			}
+			
+			exporter.exportTest(test, "export.xml");
+			jexporter.exportTest(test, "export.json");
 			
 			
 		}

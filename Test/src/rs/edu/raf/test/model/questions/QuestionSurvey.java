@@ -76,6 +76,15 @@ public class QuestionSurvey extends Question {
 	public void setListOfRateStrings(List<String> listOfRateStrings) {
 		this.listOfRateStrings = listOfRateStrings;
 	}
+
+	@Override
+	public String toStringForDocument() {
+	
+		StringBuilder stringBuild = new StringBuilder();
+		
+		
+		return null;
+	}
 	
 	
 	
