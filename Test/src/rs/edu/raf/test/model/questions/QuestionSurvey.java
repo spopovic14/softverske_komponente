@@ -16,7 +16,7 @@ public class QuestionSurvey extends Question {
 	
 	/**
 	 * empty constructor that have deffault value ("Please rate how strongly you agree or disagree with each of these statements. ") for instrictionQuestion
-	 * @param
+	 * 
 	 * instrictionQuestion(deffault) - represent instructionForQuestion - example: "Please rate how strongly you agree or disagree with each of these statements. ". It helps students to understand question
 	 */
 	public QuestionSurvey(){

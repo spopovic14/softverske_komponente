@@ -90,7 +90,8 @@ public class Test {
 	 * http://www.aspose.com/docs/display/wordsjava/Home 
 	 * 
 	 * @param directory - represent directory where you want to put Word file
-	 * @param nameOfTheDocument
+	 * @param nameOfTheDocument - represent the name of PDF document that will be created
+	 * @throws Exception if creating Document fail
 	 * */
 	
 	public void generateWordDocument(String directory, String nameOfTheDocument) throws Exception{
@@ -237,7 +238,8 @@ public class Test {
 	 * http://www.aspose.com/docs/display/wordsjava/Home 
 	 * 
 	 * @param directory - represent directory where you want to put Word file.
-	 * @param nameOfTheDocument
+	 * @param nameOfTheDocument - represent the name of PDF document that will be created
+	 * @throws Exception if creating Document fail
 	 * */
 	
 	public void generatePDF(String directory, String nameOfTheDocument) throws Exception{

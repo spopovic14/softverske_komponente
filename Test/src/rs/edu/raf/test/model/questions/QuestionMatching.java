@@ -27,7 +27,7 @@ public class QuestionMatching extends Question {
 	
 	/**
 	 * empty constructor that have default value ("Match each question type with one attribute: ") for instrictionQuestion
-	 * @param
+	 * 
 	 * instrictionQuestion(default) - represent instructionForQuestion - example: "Are these statements/questions true of false?". It helps students to understand question
 	 */
 	public QuestionMatching(){

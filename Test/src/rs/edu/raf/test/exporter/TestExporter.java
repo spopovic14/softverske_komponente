@@ -26,7 +26,7 @@ public interface TestExporter {
 	 * @param test - Test object to export
 	 * @param path - path to save the test to
 	 * @return true if exporting was successful
-	 * @throws Exception
+	 * @throws Exception if exporting failed
 	 */
 	public boolean exportTest(Test test, String path) throws Exception;
 

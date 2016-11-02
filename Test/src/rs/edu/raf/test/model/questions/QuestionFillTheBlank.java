@@ -22,7 +22,7 @@ public class QuestionFillTheBlank extends Question {
 	
 	/**
 	 * empty constructor that have deffault value ("Fill the blank spaces with right answers: ") for instrictionQuestion
-	 * @param
+	 * 
 	 * instrictionQuestion(deffault) - represent instructionForQuestion - example: "Are these statements/questions true of false?". It helps students to understand question
 	 */
 	public QuestionFillTheBlank(){

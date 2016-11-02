@@ -16,7 +16,7 @@ public interface TestImporter {
 	 * 
 	 * @param path - full path to a file with questions
 	 * @return a test with every question from the given file
-	 * @throws Exception
+	 * @throws Exception if importing failed
 	 */
 	public Test importFullTest(String path) throws Exception;
 	
@@ -27,7 +27,7 @@ public interface TestImporter {
 	 * @param path - full path to a file with questions
 	 * @param numOfQuestions - maximum number of questions to load
 	 * @return a test with numOfQuestions random questions from the given file
-	 * @throws Exception
+	 * @throws Exception if importing failed
 	 */
 	public Test importTestWithNQuestions(String path, int numOfQuestions) throws Exception;
 	
