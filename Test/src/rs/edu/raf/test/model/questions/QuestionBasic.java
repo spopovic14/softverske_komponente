@@ -5,7 +5,16 @@ import java.util.LinkedList;
 import java.util.List;
 
 import rs.edu.raf.test.model.Answer;
-
+/**
+ * Basic questions are composed of one question with multiple possible answers,
+ * including the correct answer and several incorrect answers. 
+ * Typically, students select the correct answer by circling the associated number or letter, 
+ * or filling in the associated circle on the machine-readable response sheet.
+ * 
+ * 
+ * @author marko
+ *
+ */
 public class QuestionBasic extends Question {
 
 	private String questionSentence;
@@ -17,18 +26,34 @@ public class QuestionBasic extends Question {
 		super();
 	}
 	
+	/**
+	 * Constructor with questionSentence and default value of IntroductionQuestion: "Circle the right answer(s): "
+	 * 
+	 * @param questionSentence - String that represent the actuall question , like : "Sharks are : "
+	 */
 	public QuestionBasic(String questionSentence){
 		super("Circle the right answer(s): ");
 		this.questionSentence = questionSentence;
 	}
 	
+	/**
+	 * 
+	 * @param text - represent instructionForQuestion - example: "Circle the right answer(s):". It helps students to understand question
+	 * @param questionSentence - String that represent the actuall question , like : "Sharks are : "
+	 */
 	public QuestionBasic(String text, String questionSentence){
 		super(text);
 		wrongAnswers = new LinkedList<Answer>();
 		rightAnswers = new LinkedList<Answer>();
 		this.questionSentence = questionSentence;
 	}
-	
+	/**
+	 * 
+	 * @param text - represent instructionForQuestion - example: "Circle the right answer(s):". It helps students to understand question
+	 * @param wrongAnswers - list of all wrong answers
+	 * @param rightAnswers - list of all right answers
+	 * @param questionSentence - String that represent the actuall question , like : "Sharks are : "
+	 */
 	public QuestionBasic(String text, List<Answer> wrongAnswers, List<Answer> rightAnswers, String questionSentence){
 		super(text);
 		this.wrongAnswers = new LinkedList<>(wrongAnswers);
@@ -36,7 +61,12 @@ public class QuestionBasic extends Question {
 		this.questionSentence = questionSentence;
 		
 	}
-	
+	/**
+	 * 
+	 * @param questionSentence - String that represent the actuall question , like : "Sharks are : "
+	 * @param wrongAnswers - list of all wrong answers
+	 * @param rightAnswers - list of all right answers
+	 */
 	public QuestionBasic(String questionSentence, List<Answer> wrongAnswers, List<Answer> rightAnswers){
 		super("Circle the right answer(s): ");
 		this.wrongAnswers = new LinkedList<>(wrongAnswers);
@@ -79,14 +109,14 @@ public class QuestionBasic extends Question {
 		
 		StringBuilder stringBuild = new StringBuilder();
 		
-		stringBuild.append(questionSentence + "\n");
+		stringBuild.append(questionSentence + "\r");
 		LinkedList<Answer> bothLists = new LinkedList<Answer>(); 
 		bothLists.addAll(rightAnswers);
 		bothLists.addAll(wrongAnswers);
 		int counter = 1;
 		for (Answer answer : bothLists) {
 			Collections.shuffle(bothLists);
-			stringBuild.append("\n\t" + (counter++) + ". " + answer.getText());
+			stringBuild.append("\r\t" + (counter++) + ". " + answer.getText());
 		}
 		
 		return stringBuild.toString();

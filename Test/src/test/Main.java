@@ -18,6 +18,7 @@ public class Main {
 		XMLTestImporter importer = new XMLTestImporter();
 		try {
 			Test test = importer.importFullTest("example.xml");
+			test.generatePDF("Probni Word File - Test", null);
 			test.generateWordDocument("Probni Word File - Test", null);
 			for(Question q : test.getQuestions()) {
 				if(q instanceof QuestionBasic){
